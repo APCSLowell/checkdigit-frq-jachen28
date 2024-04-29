@@ -7,7 +7,14 @@ public class CheckDigit
    */  
    public static int getCheck(int num) 
    {  
-     /* to be implemented in part (a) */
+     int [] arr = new int[getNumberOfDigits(num)];
+int p = 7;
+for(int i = 0; i < arr.length; i++){
+arr[i] = getDigit(num, i) * p;
+  p--;
+}
+return arr[arr.length-1];
+   }
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
