@@ -7,13 +7,13 @@ public class CheckDigit
    */  
    public static int getCheck(int num) 
    {  
-     int [] arr = new int[getNumberOfDigits(num)];
-int p = 7;
-for(int i = 0; i < arr.length; i++){
-arr[i] = getDigit(num, i) * p;
+     int sum = 0;
+     int p = 7;
+for(int i = 1; i <= getNumberOfDigits(num); i++){
+sum = sum + getDigit(num, i) * p;
   p--;
 }
-return arr[arr.length-1];
+return sum % 10;
    }
    }
  
