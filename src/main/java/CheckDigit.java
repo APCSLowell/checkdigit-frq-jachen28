@@ -25,7 +25,9 @@ return arr[arr.length-1];
    */     
    public static boolean isValid(int numWithCheckDigit)    
    {      
-     /* to be implemented in part (b) */    
+        if(numWithCheckDigit % 10 == getCheck(numWithCheckDigit)
+return true;
+return false;
    }    
    
    /** Returns the number of digits in num. */    
