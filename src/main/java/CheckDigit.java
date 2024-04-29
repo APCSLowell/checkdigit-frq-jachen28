@@ -26,7 +26,8 @@ return sum % 10;
    {      
         int check = numWithCheckDigit % 10;
         int check2 = numWithCheckDigit / 10; 
-        if(check == getCheck(check2)
+        int newCheck = getCheck(check2);
+        if(check == newCheck)
 return true;
 return false;
    }    
