@@ -14,7 +14,7 @@ sum += (8-i) * getDigit(num, i);
 }
 return sum % 10;
    }
-   }
+   
  
   /** Returns true if numWithCheckDigit is valid, or false    
    *  otherwise, as described in part (b). 
@@ -25,13 +25,16 @@ return sum % 10;
    public static boolean isValid(int numWithCheckDigit)    
    {      
         int check = numWithCheckDigit % 10;
-        int check2 = numWithCheckDigit / 10; 
-        int newCheck = getCheck(check2);
-        if(check == newCheck)
+        int num = numWithCheckDigit / 10; 
+        int newCheck = getCheck(num);
+        if(check == newCheck){
 return true;
+        }
 else
+          }
 return false;
-   }    
+}
+      
    
    /** Returns the number of digits in num. */    
    public static int getNumberOfDigits(int num)    
