@@ -10,7 +10,7 @@ public class CheckDigit
      int sum = 0;
      
 for(int i = 1; i <= getNumberOfDigits(num); i++){
-sum = sum + getDigit(num, i) * (8-i);
+sum += (8-i) * getDigit(num, i);
 }
 return sum % 10;
    }
@@ -29,6 +29,7 @@ return sum % 10;
         int newCheck = getCheck(check2);
         if(check == newCheck)
 return true;
+else
 return false;
    }    
    
